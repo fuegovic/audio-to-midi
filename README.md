@@ -1,4 +1,4 @@
-# MOD Audio to MIDI
+# Audio to MIDI
 
 An LV2 plugin that converts audio signals to MIDI notes, designed for the MOD platform.
 
@@ -51,4 +51,4 @@ This project is licensed under the GPL-2.0-or-later License - see the LICENSE fi
 
 ## Author
 
-[Your Name]
+Fuegovic

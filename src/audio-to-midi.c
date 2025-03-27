@@ -191,7 +191,7 @@ extension_data(const char* uri)
 }
 
 static const LV2_Descriptor descriptor = {
-    "http://moddevices.com/plugins/mod-devel/mod-audio-to-midi",
+    "https://github.com/fuegovic/audio-to-midi",
     instantiate,
     connect_port,
     activate,

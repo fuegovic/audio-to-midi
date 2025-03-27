@@ -7,7 +7,7 @@
 @prefix units: <http://lv2plug.in/ns/extensions/units#> .
 @prefix mod:   <http://moddevices.com/ns/mod#> .
 
-<http://moddevices.com/plugins/mod-devel/mod-audio-to-midi>
+<https://github.com/fuegovic/audio-to-midi>
     a lv2:Plugin ;
     doap:name "Audio to MIDI" ;
     doap:license <https://spdx.org/licenses/GPL-2.0-or-later> ;

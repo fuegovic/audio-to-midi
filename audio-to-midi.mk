@@ -1,22 +1,22 @@
 ######################################
 #
-# mod-audio-to-midi
+# audio-to-midi
 #
 ######################################
 
-MOD_AUDIO_TO_MIDI_VERSION = main
-MOD_AUDIO_TO_MIDI_SITE = $(call github,fuegovic,mod-audio-to-midi,$(MOD_AUDIO_TO_MIDI_VERSION))
-MOD_AUDIO_TO_MIDI_BUNDLES = mod-audio-to-midi.lv2
+AUDIO_TO_MIDI_VERSION = master
+AUDIO_TO_MIDI_SITE = $(call github,fuegovic,audio-to-midi,$(AUDIO_TO_MIDI_VERSION))
+AUDIO_TO_MIDI_BUNDLES = audio-to-midi.lv2
 
-MOD_AUDIO_TO_MIDI_TARGET_MAKE = $(TARGET_MAKE_ENV) $(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D)
+AUDIO_TO_MIDI_TARGET_MAKE = $(TARGET_MAKE_ENV) $(TARGET_CONFIGURE_OPTS) $(MAKE) -C $(@D)
 
-define MOD_AUDIO_TO_MIDI_BUILD_CMDS
-	$(MOD_AUDIO_TO_MIDI_TARGET_MAKE)
+define AUDIO_TO_MIDI_BUILD_CMDS
+	$(AUDIO_TO_MIDI_TARGET_MAKE)
 endef
 
-define MOD_AUDIO_TO_MIDI_INSTALL_TARGET_CMDS
-	$(MOD_AUDIO_TO_MIDI_TARGET_MAKE) install DESTDIR=$(TARGET_DIR)
-	cp -rL $($(PKG)_PKGDIR)/mod-audio-to-midi.lv2/* $(TARGET_DIR)/usr/lib/lv2/mod-audio-to-midi.lv2/
+define AUDIO_TO_MIDI_INSTALL_TARGET_CMDS
+	$(AUDIO_TO_MIDI_TARGET_MAKE) install DESTDIR=$(TARGET_DIR)
+	cp -rL $($(PKG)_PKGDIR)/audio-to-midi.lv2/* $(TARGET_DIR)/usr/lib/lv2/audio-to-midi.lv2/
 endef
 
 $(eval $(generic-package))

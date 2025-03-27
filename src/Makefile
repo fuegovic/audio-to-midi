@@ -1,4 +1,4 @@
-NAME = mod-audio-to-midi
+NAME = audio-to-midi
 
 BUNDLE = ../$(NAME).lv2
 BUILD_C_FLAGS += -I. -fPIC -DPIC

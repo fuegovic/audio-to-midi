@@ -6,8 +6,8 @@ all:
 
 install: all
 	install -d $(LV2_DESTDIR)
-	cp -r mod-audio-to-midi.lv2 $(LV2_DESTDIR)
+	cp -r audio-to-midi.lv2 $(LV2_DESTDIR)
 
 clean:
 	$(MAKE) clean -C src
-	rm -f mod-audio-to-midi.lv2/*.so
+	rm -f audio-to-midi.lv2/*.so

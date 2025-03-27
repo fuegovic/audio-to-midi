@@ -1,0 +1,60 @@
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix lv2:   <http://lv2plug.in/ns/lv2core#> .
+@prefix atom:  <http://lv2plug.in/ns/ext/atom#> .
+@prefix midi:  <http://lv2plug.in/ns/ext/midi#> .
+@prefix urid:  <http://lv2plug.in/ns/ext/urid#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix mod:   <http://moddevices.com/ns/mod#> .
+
+<http://moddevices.com/plugins/mod-devel/mod-audio-to-midi>
+    a lv2:Plugin ;
+    doap:name "Audio to MIDI" ;
+    doap:license <https://spdx.org/licenses/GPL-2.0-or-later> ;
+    doap:description "Converts audio signal to MIDI notes" ;
+    
+    lv2:requiredFeature urid:map ;
+    
+    lv2:port [
+        a lv2:InputPort, lv2:AudioPort ;
+        lv2:index 0 ;
+        lv2:symbol "audio_in" ;
+        lv2:name "Audio Input" ;
+    ] ,
+    [
+        a lv2:OutputPort, atom:AtomPort ;
+        lv2:index 1 ;
+        lv2:symbol "midi_out" ;
+        lv2:name "MIDI Out" ;
+        atom:bufferType atom:Sequence ;
+        atom:supports midi:MidiEvent ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 2 ;
+        lv2:symbol "threshold" ;
+        lv2:name "Threshold" ;
+        lv2:default -20.0 ;
+        lv2:minimum -60.0 ;
+        lv2:maximum 0.0 ;
+        units:unit units:db ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 3 ;
+        lv2:symbol "velocity" ;
+        lv2:name "MIDI Velocity" ;
+        lv2:default 0.8 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 4 ;
+        lv2:symbol "bypass" ;
+        lv2:name "Bypass" ;
+        lv2:default 0.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+        lv2:portProperty lv2:toggled ;
+    ] .

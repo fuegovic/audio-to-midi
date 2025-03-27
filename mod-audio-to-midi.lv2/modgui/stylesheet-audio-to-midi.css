@@ -1,0 +1,104 @@
+.mod-audio-to-midi {
+    background-image: linear-gradient(#2b2b2b, #1c1c1c);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 216px 368px;
+    width: 216px;
+    height: 368px;
+    border-radius: 10px;
+}
+
+.mod-audio-to-midi .mod-plugin-name {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.mod-audio-to-midi .mod-plugin-author {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.mod-audio-to-midi .mod-control-group {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    right: 20px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.mod-audio-to-midi .mod-knob {
+    text-align: center;
+    width: 80px;
+}
+
+.mod-audio-to-midi .mod-knob .mod-knob-image {
+    background-image: url(/resources/knob.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 60px;
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.mod-audio-to-midi .mod-knob .mod-knob-title {
+    display: block;
+    color: white;
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+.mod-audio-to-midi .mod-footswitch {
+    background-image: url(/resources/switch.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: auto 32px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.mod-audio-to-midi .mod-pedal-input,
+.mod-audio-to-midi .mod-pedal-output {
+    position: absolute;
+    top: 180px;
+}
+
+.mod-audio-to-midi .mod-pedal-input {
+    left: 10px;
+}
+
+.mod-audio-to-midi .mod-pedal-output {
+    right: 10px;
+}
+
+.mod-audio-to-midi .mod-pedal-input .mod-input,
+.mod-audio-to-midi .mod-pedal-output .mod-output {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 12px;
+}
+
+.mod-audio-to-midi .mod-input .mod-pedal-input-image,
+.mod-audio-to-midi .mod-output .mod-pedal-output-image {
+    background-image: url(/resources/port.png);
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+}

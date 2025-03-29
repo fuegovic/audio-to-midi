@@ -30,6 +30,7 @@
 # Build directories
 build/
 dist/
+patchstorage-lv2-builder/
 
 # OS generated files
 .DS_Store
